@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Kaverilista 1</h2>
+        <p id="nimia">lisää 10 nimeä vielä</p>
+        <form action="main.js">
+            <label for="name" id="d">Nimi:</label><br>
+            <input type="text" name="name" id="uniqueID" class="box" onkeydown="return event.key != 'Enter';">
+            <input type="button" onclick="namePrinter()" value="Lisää" class="box">
+        </form>
+        <p id="a"></p>
+    </div>
+    <div>
+        <h2>Kaverilista 2</h2>
+        <form action="main.js">
+            <label for="name" id="d">Nimi:</label><br>
+            <input type="text" name="name" id="uniqueID2" class="box" onkeydown="return event.key != 'Enter';">
+            <input type="button" onclick="addName()" value="Lisää Kaveri" class="box">
+            <input type="button" onclick="removeName()" value="Poista Kaveri (monesko esim. 3)" class="box">
+            <input type="button" onclick="sortNames()" value="Järjestä Kaverit" class="box">
+        </form>
+        <p id="b"></p>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
