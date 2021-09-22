@@ -6,9 +6,13 @@ function namePrinter() {
     if (names.length < 10) {
         names.push(document.getElementById("uniqueID").value);
         nimiaViela -= 1;
-        document.getElementById("nimia").innerHTML = "lisaa " + nimiaViela + " nimeä vielä";
+        if (nimiaViela != 1) {
+            document.getElementById("nimia").innerHTML = "lisaa " + nimiaViela + " nimeä vielä";
+        } else {
+            document.getElementById("nimia").innerHTML = "lisaa " + nimiaViela + " nimi vielä";
+        }
     }
-    else if (names.length == 10) {
+    if (names.length == 10) {
         let text = "<ul>";
         names.forEach(spare);
         text += "</ul>";
@@ -17,7 +21,7 @@ function namePrinter() {
         function spare(value) {
             text += "<li>" + value + "</li>";
         }
-        document.getElementById("nimia").innerHTML = "";
+        document.getElementById("nimia").innerHTML = "          ";
     }
 }
 
